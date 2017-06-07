@@ -1,0 +1,13 @@
+{
+  "name": "fiori-demo-app",
+  "version": "1.0.0",
+  "description": "FIORI 2.0 FOR YOUR APPLICATION @ UI5Con 2017",
+  "main": "index.html",
+  "scripts": {
+	"serve": "http-server --cors -p 8080"
+  },
+  "author": "Yavor Ivanov / Stanislava Baltova",
+  "dependencies": {
+	"http-server": "^0.8.5"
+  }
+}
