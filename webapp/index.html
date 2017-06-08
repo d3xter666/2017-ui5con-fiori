@@ -20,7 +20,7 @@
 
 	<script>
 		sap.ui.getCore().attachInit(function () {
-			document.getElementById("content").innerHTML = '<h1>Welcome to OpenUI5!</h1>';
+			sap.m.Text({text: "Welcome to OpenUI5!"}).placeAt("content");
 		});
 	</script>
 </head>
