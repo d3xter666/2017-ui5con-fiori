@@ -1,7 +1,45 @@
 <mvc:View controllerName="ui5confUI5Conf.controller.DetailDetail"
 		  xmlns:mvc="sap.ui.core.mvc"
 		  xmlns="sap.m"
+		  xmlns:uxap="sap.uxap"
+		  xmlns:layout="sap.ui.layout"
 		  displayBlock="true"
 		  height="100%">
-	<Text text="Last Page"/>
+
+	<uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader objectImageURI="sap-icon://product"
+								   objectImageShape="Square"
+								   isObjectIconAlwaysVisible="false"
+								   isObjectTitleAlwaysVisible="false"
+								   isObjectSubtitleAlwaysVisible="false">
+				<uxap:actions>
+					<uxap:ObjectPageHeaderActionButton icon="sap-icon://pull-down"  type="Emphasized"/>
+					<uxap:ObjectPageHeaderActionButton icon="sap-icon://show" type="Emphasized"/>
+					<uxap:ObjectPageHeaderActionButton text="{i18n>detail.header.ToggleFooter}" hideIcon="true" hideText="false" type="Emphasized" press="toggleFooter"/>
+				</uxap:actions>
+			</uxap:ObjectPageHeader>
+		</uxap:headerTitle>
+		<uxap:headerContent>
+			<layout:VerticalLayout>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<Label text="{i18n>detail.header.dispatch}"/>
+				<VBox height="63px">
+					<Label text="{i18n>detail.header.supplyProgress}"/>
+					<ProgressIndicator percentValue="30" displayValue="30%" showValue="true" state="None"/>
+				</VBox>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<Label text="San Jose, USA"/>
+			</layout:VerticalLayout>
+		</uxap:headerContent>
+		<uxap:footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="{i18n>master.footer.Accept}"/>
+				<Button type="Reject" text="{i18n>master.footer.Reject}"/>
+			</OverflowToolbar>
+		</uxap:footer>
+	</uxap:ObjectPageLayout>
 </mvc:View>
