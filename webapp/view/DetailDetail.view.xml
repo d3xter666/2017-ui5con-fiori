@@ -10,18 +10,25 @@
 		<uxap:headerTitle>
 			<uxap:ObjectPageHeader objectImageURI="sap-icon://product"
 								   objectImageShape="Square"
+								   objectTitle="{detail>/Name}"
+								   objectImageAlt="{detail>/Name}"
+								   objectSubtitle="{detail>/Category}"
 								   isObjectIconAlwaysVisible="false"
 								   isObjectTitleAlwaysVisible="false"
 								   isObjectSubtitleAlwaysVisible="false">
+
 				<uxap:actions>
-					<uxap:ObjectPageHeaderActionButton icon="sap-icon://pull-down"  type="Emphasized"/>
+					<uxap:ObjectPageHeaderActionButton icon="sap-icon://pull-down" type="Emphasized"/>
 					<uxap:ObjectPageHeaderActionButton icon="sap-icon://show" type="Emphasized"/>
-					<uxap:ObjectPageHeaderActionButton text="{i18n>detail.header.ToggleFooter}" hideIcon="true" hideText="false" type="Emphasized" press="toggleFooter"/>
+					<uxap:ObjectPageHeaderActionButton text="{i18n>detail.header.ToggleFooter}" hideIcon="true"
+													   hideText="false" type="Emphasized" press="toggleFooter"/>
 				</uxap:actions>
 			</uxap:ObjectPageHeader>
 		</uxap:headerTitle>
 		<uxap:headerContent>
 			<layout:VerticalLayout>
+				<Text text="{detail>/ProductId}"/>
+				<Text text="{detail>/SupplierName}"/>
 			</layout:VerticalLayout>
 			<layout:VerticalLayout>
 				<Label text="{i18n>detail.header.dispatch}"/>
@@ -34,6 +41,19 @@
 				<Label text="San Jose, USA"/>
 			</layout:VerticalLayout>
 		</uxap:headerContent>
+		<uxap:sections>
+			<uxap:ObjectPageSection>
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection>
+						<uxap:blocks>
+							<Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi ipsum. Quisque a odio neque. Duis dapibus mi porttitor ipsum interdum viverra. Ut non semper metus. Aliquam id tortor et eros semper tincidunt ut vitae augue. Pellentesque sed tincidunt mi, quis tempus libero. Nullam eget euismod erat, nec laoreet diam. Etiam ornare vel est vel lobortis. Cras blandit, arcu condimentum laoreet hendrerit, leo odio tristique lorem, vitae tempus felis lorem sed enim. Sed ac tempus tellus, eget ullamcorper dolor. Mauris molestie justo nulla, eu vulputate ligula rutrum efficitur. Etiam bibendum nisl ut bibendum vehicula."/>
+							<Text text="Proin nibh elit, dapibus in mauris sed, euismod tincidunt quam. Integer commodo nibh scelerisque felis consectetur rhoncus. Suspendisse potenti. Nam fermentum augue quis vehicula finibus. Duis urna nunc, pharetra ut orci vitae, ultricies tempus enim. Sed sed risus in risus venenatis rhoncus ac non tellus. Curabitur consequat, ante vitae pharetra dictum, ex nunc vulputate odio, ac dignissim orci dolor in arcu. Vestibulum tellus risus, semper et ipsum quis, hendrerit luctus libero. Suspendisse pharetra enim vel maximus feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean mattis massa non turpis posuere semper. Morbi mollis lacinia velit, non pulvinar ex cursus nec. Nam dapibus, lectus eget malesuada faucibus, tellus libero consequat enim, eu accumsan augue sem nec sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"/>
+							<Text text="Quisque quis felis et diam ultricies facilisis. Nullam vehicula, quam quis euismod mattis, enim ante efficitur elit, eu porttitor elit nunc quis mauris. Donec lacinia convallis dui ac dictum. Vivamus tincidunt tortor augue, at varius sem feugiat ut. Proin eleifend ligula sed neque laoreet interdum. Vivamus sit amet interdum elit. Mauris laoreet mattis quam, et tristique velit ultricies dictum. Morbi efficitur nunc ac mauris interdum, et tincidunt ligula vestibulum. Curabitur quis turpis eleifend, sodales erat quis, tempus ipsum. Integer luctus facilisis ante id condimentum. Phasellus imperdiet, sapien vel ultricies hendrerit, sapien ante placerat risus, eu condimentum justo odio sed lacus. Vivamus quis est lobortis, volutpat turpis eget, scelerisque arcu."/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
 		<uxap:footer>
 			<OverflowToolbar>
 				<ToolbarSpacer/>

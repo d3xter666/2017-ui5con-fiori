@@ -10,10 +10,14 @@
 		<uxap:headerTitle>
 			<uxap:ObjectPageHeader objectImageURI="sap-icon://product"
 								   objectImageShape="Square"
+								   objectTitle="{detail>/Name}"
+								   objectImageAlt="{detail>/Name}"
+								   objectSubtitle="{detail>/Category}"
 								   isObjectIconAlwaysVisible="false"
 								   isObjectTitleAlwaysVisible="false"
 								   isObjectSubtitleAlwaysVisible="false">
-				<uxap:actions>
+
+			<uxap:actions>
 					<uxap:ObjectPageHeaderActionButton icon="sap-icon://pull-down" type="Emphasized"/>
 					<uxap:ObjectPageHeaderActionButton icon="sap-icon://show" type="Emphasized"/>
 					<uxap:ObjectPageHeaderActionButton text="{i18n>detail.header.ToggleFooter}" hideIcon="true" hideText="false" type="Emphasized" press="toggleFooter"/>
@@ -22,6 +26,8 @@
 		</uxap:headerTitle>
 		<uxap:headerContent>
 			<layout:VerticalLayout>
+				<Text text="{detail>/ProductId}"/>
+				<Text text="{detail>/SupplierName}"/>
 			</layout:VerticalLayout>
 			<layout:VerticalLayout>
 				<Label text="{i18n>detail.header.dispatch}"/>
@@ -39,7 +45,6 @@
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection>
 						<uxap:blocks>
-							<Button text="Go To Next Page" press="handlePress"/>
 							<Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi ipsum. Quisque a odio neque. Duis dapibus mi porttitor ipsum interdum viverra. Ut non semper metus. Aliquam id tortor et eros semper tincidunt ut vitae augue. Pellentesque sed tincidunt mi, quis tempus libero. Nullam eget euismod erat, nec laoreet diam. Etiam ornare vel est vel lobortis. Cras blandit, arcu condimentum laoreet hendrerit, leo odio tristique lorem, vitae tempus felis lorem sed enim. Sed ac tempus tellus, eget ullamcorper dolor. Mauris molestie justo nulla, eu vulputate ligula rutrum efficitur. Etiam bibendum nisl ut bibendum vehicula."/>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
@@ -49,7 +54,7 @@
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection>
 						<uxap:blocks>
-							<Table id="idProductsTable" inset="false">
+							<Table id="idProductsTable" inset="false" items="{path: 'detailDetail>/ProductCollection'}">
 								<columns>
 									<Column minScreenWidth="Tablet" demandPopin="true">
 										<Text text="{i18n>master.Name}"/>
@@ -62,8 +67,11 @@
 									</Column>
 								</columns>
 								<items>
-									<ColumnListItem vAlign="Middle">
+									<ColumnListItem vAlign="Middle" type="Navigation" press="handlePress">
 										<cells>
+											<ObjectIdentifier title="{detailDetail>Name}" text="{detailDetail>ProductId}"/>
+											<Text text="{detailDetail>Category}"/>
+											<Text text="{detailDetail>SupplierName}"/>
 										</cells>
 									</ColumnListItem>
 								</items>

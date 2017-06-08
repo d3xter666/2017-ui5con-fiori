@@ -62,6 +62,10 @@
 			"": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/products.json"
+			},
+			"detailDetail": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/products_less.json"
 			}
 		},
 		"resources": {

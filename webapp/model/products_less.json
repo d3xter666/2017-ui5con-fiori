@@ -1,0 +1,42 @@
+{
+  "title" : "Products List",
+  "showFooter" : false,
+  "headerExpanded": true,
+  "titleClickable": true,
+  "ProductCollection": [
+    {
+      "ProductId": "1239102",
+      "Name": "Power Projector 4713",
+      "Category": "Projector",
+      "SupplierName": "Titanium"
+    },
+
+    {
+      "ProductId": "K47322.1",
+      "Name": "Hurricane GX",
+      "Category": "Graphics Card",
+      "SupplierName": "Red Point Stores"
+    },
+
+    {
+      "ProductId": "P1239823",
+      "Name": "Monitor Locking Cable",
+      "Category": "Accessory",
+      "SupplierName": "Technocom"
+    },
+
+    {
+      "ProductId": "214-121-828",
+      "Name": "Laptop Case",
+      "Category": "Accessory",
+      "SupplierName": "Red Point Stores"
+    },
+
+    {
+      "ProductId": "OP-38800002",
+      "Name": "High End Laptop 2b",
+      "Category": "Laptop",
+      "SupplierName": "Titanium"
+    }
+  ]
+}
