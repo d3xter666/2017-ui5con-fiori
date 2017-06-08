@@ -2,6 +2,8 @@
 		  xmlns:mvc="sap.ui.core.mvc"
 		  xmlns="sap.m"
 		  xmlns:f="sap.f"
+		  xmlns:layout="sap.ui.layout"
+		  xmlns:core="sap.ui.core"
 		  displayBlock="true"
 		  height="100%">
 	<f:DynamicPage id="dynamicPageId">
@@ -15,12 +17,64 @@
 					<ToolbarSpacer/>
 					<OverflowToolbarButton icon="sap-icon://add" text="{i18n>master.title.Add}" type="Transparent"/>
 					<OverflowToolbarButton icon="sap-icon://edit" text="{i18n>master.title.Edit}" type="Transparent"/>
-					<OverflowToolbarButton icon="sap-icon://delete" text="{i18n>master.title.Delete}" type="Transparent"/>
-					<Button icon="sap-icon://post" text="{i18n>master.title.ToggleFooter}" type="Transparent" press="onToggleFooter" />
+					<OverflowToolbarButton icon="sap-icon://delete" text="{i18n>master.title.Delete}"
+										   type="Transparent"/>
+					<Button icon="sap-icon://post" text="{i18n>master.title.ToggleFooter}" type="Transparent"
+							press="onToggleFooter"/>
 				</f:actions>
 			</f:DynamicPageTitle>
 		</f:title>
 		<!-- DynamicPage Title -->
+
+		<!-- DynamicPage Header -->
+		<f:header>
+			<f:DynamicPageHeader pinnable="true">
+				<f:content>
+					<layout:Grid defaultSpan="XL4 L6 M6 S12">
+						<layout:VerticalLayout>
+							<Label text="{i18n>master.Name}"/>
+							<Select id="slName"
+									width="200px"
+									forceSelection="true">
+							</Select>
+						</layout:VerticalLayout>
+						<layout:VerticalLayout>
+							<Label text="{i18n>master.Category}"/>
+							<Select id="slCategory"
+									width="200px"
+									forceSelection="true">
+							</Select>
+						</layout:VerticalLayout>
+						<layout:VerticalLayout>
+							<Label text="{i18n>master.SupplierName}"/>
+							<Select id="slSupplierName"
+									width="200px"
+									forceSelection="true">
+							</Select>
+						</layout:VerticalLayout>
+					</layout:Grid>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<!-- DynamicPage Header -->
+
+		<!-- DynamicPage Content -->
+		<f:content>
+			<Table id="idProductsTable" inset="false">
+				<columns>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>master.Name}"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>master.Category}"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>master.SupplierName}"/>
+					</Column>
+				</columns>
+			</Table>
+		</f:content>
+		<!-- DynamicPage Content -->
 
 		<!-- DynamicPage Footer -->
 		<f:footer>
