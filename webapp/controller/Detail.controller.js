@@ -15,6 +15,10 @@ sap.ui.define([
 				"detail-detail-item": "item-inner1",
 				"detail-item": "item1"
 			});
+		},
+		toggleFooter: function () {
+			var oObjectPageLayout = this.getView().byId("ObjectPageLayout");
+			oObjectPageLayout.setShowFooter(!oObjectPageLayout.getShowFooter());
 		}
 	});
 });

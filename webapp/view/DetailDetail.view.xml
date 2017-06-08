@@ -38,7 +38,7 @@
 			<OverflowToolbar>
 				<ToolbarSpacer/>
 				<Button type="Accept" text="{i18n>master.footer.Accept}"/>
-				<Button type="Reject" text="{i18n>master.footer.Reject}"/>
+				<Button type="Reject" text="{i18n>master.title.Reject}"/>
 			</OverflowToolbar>
 		</uxap:footer>
 	</uxap:ObjectPageLayout>
