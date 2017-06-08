@@ -20,7 +20,13 @@
 
 	<script>
 		sap.ui.getCore().attachInit(function () {
-			sap.m.Text({text: "Welcome to OpenUI5!"}).placeAt("content");
+			new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+					height: "100%",
+					name: "ui5confUI5Conf"
+				}),
+				appWidthLimited: false
+			}).placeAt("content");
 		});
 	</script>
 </head>
