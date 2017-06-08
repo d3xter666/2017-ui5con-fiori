@@ -3,5 +3,5 @@
 		  xmlns="sap.m"
 		  displayBlock="true"
 		  height="100%">
-	<Button text="Test" press="handlePress"/>
+	<Button text="Go To Next Page" press="handlePress"/>
 </mvc:View>

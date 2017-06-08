@@ -82,7 +82,7 @@
 					</Column>
 				</columns>
 				<items>
-					<ColumnListItem vAlign="Middle">
+					<ColumnListItem vAlign="Middle" type="Navigation" press="handleItemPress">
 						<cells>
 							<ObjectIdentifier title="{Name}" text="{ProductId}"/>
 							<Text text="{Category}"/>

@@ -3,5 +3,5 @@
 		  xmlns="sap.m"
 		  displayBlock="true"
 		  height="100%">
-	<Text text="The end"/>
+	<Text text="Last Page"/>
 </mvc:View>
