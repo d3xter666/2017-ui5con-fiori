@@ -1,0 +1,35 @@
+<mvc:View controllerName="ui5confUI5Conf.controller.Master"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m"
+		  xmlns:f="sap.f"
+		  displayBlock="true"
+		  height="100%">
+	<f:DynamicPage id="dynamicPageId">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="My Products"/>
+				</f:heading>
+				<f:actions>
+					<ToolbarSpacer/>
+					<OverflowToolbarButton icon="sap-icon://add" text="{i18n>master.title.Add}" type="Transparent"/>
+					<OverflowToolbarButton icon="sap-icon://edit" text="{i18n>master.title.Edit}" type="Transparent"/>
+					<OverflowToolbarButton icon="sap-icon://delete" text="{i18n>master.title.Delete}" type="Transparent"/>
+					<Button icon="sap-icon://post" text="{i18n>master.title.ToggleFooter}" type="Transparent" press="onToggleFooter" />
+				</f:actions>
+			</f:DynamicPageTitle>
+		</f:title>
+		<!-- DynamicPage Title -->
+
+		<!-- DynamicPage Footer -->
+		<f:footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="{i18n>master.footer.Accept}"/>
+				<Button type="Reject" text="{i18n>master.title.Reject}"/>
+			</OverflowToolbar>
+		</f:footer>
+		<!-- DynamicPage Footer -->
+	</f:DynamicPage>
+</mvc:View>
