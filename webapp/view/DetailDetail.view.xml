@@ -1,0 +1,7 @@
+<mvc:View controllerName="ui5confUI5Conf.controller.DetailDetail"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m"
+		  displayBlock="true"
+		  height="100%">
+	<Text text="The end"/>
+</mvc:View>

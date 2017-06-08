@@ -68,6 +68,54 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.f.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ui5confUI5Conf.view",
+				"controlId": "fcl",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "masterName",
+				"target": [
+					"master"
+				],
+				"layout": "OneColumn"
+			}, {
+				"pattern": "detail/{detail-item}",
+				"name": "detailName",
+				"target": [
+				"master",
+				"detail"
+				],
+				"layout": "TwoColumnsMidExpanded"
+			}, {
+				"pattern": "detail/{detail-item}/detail-detail/{detail-detail-item}",
+				"name": "detailDetailName",
+				"target": [
+				"master",
+				"detail",
+				"detailDetail"
+				],
+				"layout": "ThreeColumnsEndExpanded"
+		  }],
+		  "targets": {
+				"master": {
+					"viewName": "Master",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Detail",
+					"controlAggregation": "midColumnPages"
+				},
+				"detailDetail": {
+					"viewName": "DetailDetail",
+					"controlAggregation": "endColumnPages"
+				}
+			}
 		}
 	}
 }
