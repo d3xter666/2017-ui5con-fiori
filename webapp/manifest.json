@@ -35,7 +35,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ui5confUI5Conf.view.Master",
+			"viewName": "ui5confUI5Conf.view.App",
 			"type": "XML"
 		},
 		"dependencies": {

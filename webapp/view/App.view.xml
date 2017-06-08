@@ -1,8 +1,12 @@
 <mvc:View controllerName="ui5confUI5Conf.controller.App"
-		  xmlns:m="sap.m"
+		  xmlns="sap.f"
 		  xmlns:mvc="sap.ui.core.mvc"
 		  displayBlock="true"
 		  height="100%">
 
-	<m:Text text="Welcome to OpenUI5!"/>
+	<FlexibleColumnLayout id="fcl">
+		<beginColumnPages>
+			<mvc:XMLView id="beginView" viewName="ui5confUI5Conf.view.Master"/>
+		</beginColumnPages>
+	</FlexibleColumnLayout>
 </mvc:View>
