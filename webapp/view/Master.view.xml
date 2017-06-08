@@ -35,21 +35,30 @@
 							<Label text="{i18n>master.Name}"/>
 							<Select id="slName"
 									width="200px"
-									forceSelection="true">
+									forceSelection="true"
+									change="onSelectChange"
+									items="{ path: '/ProductNames' }">
+								<core:Item key="{key}" text="{name}"/>
 							</Select>
 						</layout:VerticalLayout>
 						<layout:VerticalLayout>
 							<Label text="{i18n>master.Category}"/>
 							<Select id="slCategory"
 									width="200px"
-									forceSelection="true">
+									forceSelection="true"
+									change="onSelectChange"
+									items="{ path: '/ProductCategories' }">
+								<core:Item key="{key}" text="{name}"/>
 							</Select>
 						</layout:VerticalLayout>
 						<layout:VerticalLayout>
 							<Label text="{i18n>master.SupplierName}"/>
 							<Select id="slSupplierName"
 									width="200px"
-									forceSelection="true">
+									forceSelection="true"
+									change="onSelectChange"
+									items="{ path: '/ProductSuppliers' }">
+								<core:Item key="{key}" text="{name}"/>
 							</Select>
 						</layout:VerticalLayout>
 					</layout:Grid>
@@ -60,7 +69,7 @@
 
 		<!-- DynamicPage Content -->
 		<f:content>
-			<Table id="idProductsTable" inset="false">
+			<Table id="idProductsTable" inset="false" items="{ path: '/ProductCollection' }">
 				<columns>
 					<Column minScreenWidth="Tablet" demandPopin="true">
 						<Text text="{i18n>master.Name}"/>
@@ -72,6 +81,15 @@
 						<Text text="{i18n>master.SupplierName}"/>
 					</Column>
 				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle">
+						<cells>
+							<ObjectIdentifier title="{Name}" text="{ProductId}"/>
+							<Text text="{Category}"/>
+							<Text text="{SupplierName}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
 			</Table>
 		</f:content>
 		<!-- DynamicPage Content -->

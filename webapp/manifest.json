@@ -58,6 +58,10 @@
 				"settings": {
 					"bundleName": "ui5confUI5Conf.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/products.json"
 			}
 		},
 		"resources": {
