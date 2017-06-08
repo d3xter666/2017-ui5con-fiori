@@ -1,0 +1,8 @@
+<mvc:View controllerName="ui5confUI5Conf.controller.App"
+		  xmlns:m="sap.m"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true"
+		  height="100%">
+
+	<m:Text text="Welcome to OpenUI5!"/>
+</mvc:View>

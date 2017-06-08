@@ -34,6 +34,10 @@
 	},
 
 	"sap.ui5": {
+		"rootView": {
+			"viewName": "ui5confUI5Conf.view.App",
+			"type": "XML"
+		},
 		"dependencies": {
 			"minUI5Version": "1.46.0",
 			"libs": {
