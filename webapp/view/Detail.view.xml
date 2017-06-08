@@ -1,12 +1,10 @@
 <mvc:View controllerName="ui5confUI5Conf.controller.Detail"
 		  xmlns:mvc="sap.ui.core.mvc"
 		  xmlns="sap.m"
-		  xmlns:core="sap.ui.core"
 		  xmlns:uxap="sap.uxap"
 		  xmlns:layout="sap.ui.layout"
 		  displayBlock="true"
 		  height="100%">
-	<Button text="Go To Next Page" press="handlePress"/>
 
 	<uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
 		<uxap:headerTitle>
@@ -41,6 +39,7 @@
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection>
 						<uxap:blocks>
+							<Button text="Go To Next Page" press="handlePress"/>
 							<Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi ipsum. Quisque a odio neque. Duis dapibus mi porttitor ipsum interdum viverra. Ut non semper metus. Aliquam id tortor et eros semper tincidunt ut vitae augue. Pellentesque sed tincidunt mi, quis tempus libero. Nullam eget euismod erat, nec laoreet diam. Etiam ornare vel est vel lobortis. Cras blandit, arcu condimentum laoreet hendrerit, leo odio tristique lorem, vitae tempus felis lorem sed enim. Sed ac tempus tellus, eget ullamcorper dolor. Mauris molestie justo nulla, eu vulputate ligula rutrum efficitur. Etiam bibendum nisl ut bibendum vehicula."/>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
@@ -78,7 +77,7 @@
 			<OverflowToolbar>
 				<ToolbarSpacer/>
 				<Button type="Accept" text="{i18n>master.footer.Accept}"/>
-				<Button type="Reject" text="{i18n>master.footer.Reject}"/>
+				<Button type="Reject" text="{i18n>master.title.Reject}"/>
 			</OverflowToolbar>
 		</uxap:footer>
 	</uxap:ObjectPageLayout>
